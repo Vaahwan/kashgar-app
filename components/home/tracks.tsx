@@ -2,6 +2,7 @@
 
 import { useRef, useState, type KeyboardEvent } from "react";
 import { Card } from "@/components/ui/card";
+import { ProgressBar } from "@/components/ui/progress-bar";
 
 const periods = ["Daily", "Weekly", "12 Week Year"] as const;
 const tracks = [
@@ -57,9 +58,7 @@ export function Tracks() {
               <span className="text-[13px] text-(--muted)">{track.notes}</span>
             </div>
             <p className="font-[family-name:var(--font-bricolage)] text-4xl leading-[1.3] font-bold">{track.progress}%</p>
-            <div className="h-1.5 overflow-hidden rounded-[3px] bg-(--line)" role="progressbar" aria-label={`${track.name} ${period} progress`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={track.progress}>
-              <div className="h-full rounded-[inherit] bg-(--accent)" style={{ width: `${track.progress}%` }} />
-            </div>
+            <ProgressBar value={track.progress} label={`${track.name} ${period} progress`} />
           </Card>
         ))}
       </div>

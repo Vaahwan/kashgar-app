@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from "react";
 
 type CardProps = HTMLAttributes<HTMLElement> & {
-  as?: "div" | "section" | "article" | "figure";
+  as?: "div" | "section" | "article" | "figure" | "details";
   surface?: "default" | "soft";
 };
 

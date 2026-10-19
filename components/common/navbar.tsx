@@ -11,6 +11,7 @@ const searchSections = [
   { label: "12-Week Goal", href: "/#goals", keywords: "company switch content body fat" },
   { label: "Tracks", href: "/#tracks", keywords: "stability growth content fitness notes" },
   { label: "Medium Term Vision", href: "/#vision", keywords: "wealth software developer job" },
+  { label: "Nuke Today", href: "/nuke-today", keywords: "daily office stability tickets growth skillup tasks reflection" },
 ];
 
 export function Navbar() {
